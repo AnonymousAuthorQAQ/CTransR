@@ -1,0 +1,32 @@
+use std::sync::{Arc, Mutex};
+use std::thread;
+
+const INITIAL_BALANCE: i32 = 1_000_000;
+const WITHDRAW_AMOUNT: i32 = 500_000;
+
+fn withdraw(balance: Arc<Mutex<i32>>, amount: i32) {
+    for _ in 0..amount {
+        let mut balance_lock = balance.lock().unwrap();
+        *balance_lock -= 1;
+    }
+}
+
+fn main() {
+    let balance = Arc::new(Mutex::new(INITIAL_BALANCE));
+
+    let balance_clone1 = Arc::clone(&balance);
+    let thread1 = thread::spawn(move || {
+        withdraw(balance_clone1, WITHDRAW_AMOUNT);
+    });
+
+    let balance_clone2 = Arc::clone(&balance);
+    let thread2 = thread::spawn(move || {
+        withdraw(balance_clone2, WITHDRAW_AMOUNT);
+    });
+
+    thread1.join().unwrap();
+    thread2.join().unwrap();
+
+    let final_balance = *balance.lock().unwrap();
+    println!("Final account balance: {}", final_balance);
+}

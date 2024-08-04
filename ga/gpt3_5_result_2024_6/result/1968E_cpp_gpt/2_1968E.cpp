@@ -1,0 +1,38 @@
+use std::io::{self, BufRead};
+
+fn solve() {
+    let stdin = io::stdin();
+    let mut input = stdin.lock();
+    
+    let mut line = String::new();
+    input.read_line(&mut line).unwrap();
+    let n: usize = line.trim().parse().unwrap();
+    let mut t = n;
+    
+    println!("1 1");
+    println!("2 1");
+    t -= 2;
+    
+    if t > 0 {
+        println!("{} {}", n, n);
+        t -= 1;
+    }
+    
+    for i in 3..3+t {
+        println!("1 {}", i);
+    }
+}
+
+fn main() {
+    let stdin = io::stdin();
+    let mut input = stdin.lock();
+    
+    let mut line = String::new();
+    
+    input.read_line(&mut line).unwrap();
+    let t: usize = line.trim().parse().unwrap();
+    
+    for _ in 0..t {
+        solve();
+    }
+}

@@ -1,0 +1,11 @@
+[package]
+name = "rust_tests"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+nix = "0.28.0"
+libc = "0.2.155"
+memmap2 = "0.9.4"
+mmap = "0.1.1"
+regex = "1.7"

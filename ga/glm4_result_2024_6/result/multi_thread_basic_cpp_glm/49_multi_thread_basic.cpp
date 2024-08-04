@@ -1,0 +1,23 @@
+use std::sync::{Arc, Mutex};
+use std::thread;
+
+fn withdraw(account: Arc<Mutex<i32>>) {
+    let mut account = account.lock().unwrap();
+    let amount = 500000;
+    *account -= amount;
+}
+
+fn main() {
+    let account_balance = Arc::new(Mutex::new(1000000));
+
+    let account_balance1 = Arc::clone(&account_balance);
+    let account_balance2 = Arc::clone(&account_balance);
+
+    let t1 = thread::spawn(move || withdraw(account_balance1));
+    let t2 = thread::spawn(move || withdraw(account_balance2));
+
+    t1.join().unwrap();
+    t2.join().unwrap();
+
+    println!("Final account balance: {}", *account_balance.lock().unwrap());
+}

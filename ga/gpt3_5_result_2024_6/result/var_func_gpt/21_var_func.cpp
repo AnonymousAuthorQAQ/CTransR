@@ -1,0 +1,12 @@
+use std::ffi::VaList;
+
+fn print_values(n: i32, args: VaList) {
+    for _ in 0..n {
+        let value: i32 = args.arg::<i32>().unwrap();
+        println!("Value: {}", value);
+    }
+}
+
+fn main() {
+    print_values(3, va_list![10, 20, 30]);
+}

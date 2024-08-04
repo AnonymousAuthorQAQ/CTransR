@@ -1,0 +1,9 @@
+Queue is empty, cannot dequeue.
+FrontAndDequeue: 0
+FrontAndDequeue: 1
+FrontAndDequeue: 2
+FrontAndDequeue: 3
+FrontAndDequeue: 4
+Front: 0
+Front: 1
+Front: 2

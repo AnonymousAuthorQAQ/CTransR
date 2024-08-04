@@ -1,0 +1,8 @@
+Constructor
+Inside inner scope
+Object is alive, value: 10
+Value: 20
+Outside inner scope
+Object is alive, value: 20
+Destructor
+Object has been destroyed

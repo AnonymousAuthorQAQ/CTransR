@@ -1,0 +1,10 @@
+Tree after insertion:
+1
+3
+6
+9
+Tree after deleting even numbers:
+1
+3
+9
+Min is 1, Max is 9

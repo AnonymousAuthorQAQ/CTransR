@@ -1,0 +1,6 @@
+Enter radius r and parameter p for SquareK: 
+SquareK isInside: Yes
+SquareK overlap: No
+Enter radius r and parameter p for CubeK: 
+CubeK isInside: No
+CubeK overlap: No

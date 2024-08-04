@@ -1,0 +1,65 @@
+use std::io::{self, BufRead};
+use std::cmp::Ordering;
+
+const N: usize = 2e5 as usize + 3;
+
+fn main() {
+    let stdin = io::stdin();
+    let mut lines = stdin.lock().lines();
+    let t = lines.next().unwrap().unwrap().parse::<i32>().unwrap();
+    for _ in 0..t {
+        let mut nxya = lines.next().unwrap().unwrap().split_whitespace();
+        let n = nxya.next().unwrap().parse::<usize>().unwrap();
+        let x = nxya.next().unwrap().parse::<usize>().unwrap();
+        let y = nxya.next().unwrap().parse::<usize>().unwrap();
+        let a = nxya.next().unwrap();
+        let mut p = vec![0; N];
+        let mut t = vec![0; N];
+        let mut ans = vec![0; N];
+        let mut z = vec![0; N];
+        z[1] = n;
+        for i in 2..=n {
+            let mut j = 0;
+            while j + z[j] > i {
+                z[i] = std::cmp::min(z[i - j + 1], j + z[j] - i);
+            }
+            while a.chars().nth(i + z[i] - 1) == a.chars().nth(1 + z[i] - 1) {
+                z[i] += 1;
+            }
+            if i + z[i] > j + z[j] {
+                j = i;
+            }
+        }
+        t[1..=n].sort_by(|&i, &j| z[i].cmp(&z[j]));
+        for i in 1..=n {
+            let mut k = 1;
+            while k <= n && z[t[k]] < i {
+                p[t[k]] = t[k] + 1;
+                k += 1;
+            }
+            let mut c = 0;
+            for j in 1..=n {
+                if Find(&mut p, j + i) == j {
+                    c += 1;
+                }
+            }
+            ans[c] = i;
+        }
+        for i in (0..=n).rev() {
+            ans[i] = std::cmp::max(ans[i], ans[i + 1]);
+        }
+        for i in x..=y {
+            print!("{} ", ans[i]);
+        }
+        println!("");
+    }
+}
+
+fn Find(p: &mut Vec<usize>, k: usize) -> usize {
+    if k > N || p[k] == k {
+        k
+    } else {
+        p[k] = Find(p, p[k]);
+        p[k]
+    }
+}
