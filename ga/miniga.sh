@@ -99,3 +99,8 @@ mv 1968G1_cpp_mini 4omini/result
 mv 1968G2_cpp_mini_success 4omini/success
 mv 1968G2_cpp_mini 4omini/result
 echo "Done"
+
+echo "rename"
+python rename.py 4omini
+echo "Done"
+

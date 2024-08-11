@@ -36,66 +36,71 @@ python gpt_ga.py ../dataset/codeforce/cpp/1968G2.cpp ../dataset/codeforce/testcp
 
 
 echo "mv"
-# mv double_free_gpt_success gpt3_5/success
-# mv double_free_gpt gpt3_5/result
-# mv message_queue_gpt_success gpt3_5/success
-# mv message_queue_gpt gpt3_5/result
-# mv multi_thread_basic_gpt_success gpt3_5/success
-# mv multi_thread_basic_gpt gpt3_5/result
-# mv mutex_gpt_success gpt3_5/success
-# mv mutex_gpt gpt3_5/result
-# mv queue_gpt_success gpt3_5/success
-# mv queue_gpt gpt3_5/result
-# mv queue_l_gpt_success gpt3_5/success
-# mv queue_l_gpt gpt3_5/result
-# mv server_clients_gpt_success gpt3_5/success
-# mv server_clients_gpt gpt3_5/result
-# mv tree_gpt_success gpt3_5/success
-# mv tree_gpt gpt3_5/result
-# mv tree_l_gpt_success gpt3_5/success
-# mv tree_l_gpt gpt3_5/result
-# mv weakptr_gpt_success gpt3_5/success
-# mv weakptr_gpt gpt3_5/result
-# mv weakptr_l_gpt_success gpt3_5/success
-# mv weakptr_l_gpt gpt3_5/result
-# mv derived_gpt_success gpt3_5/success
-# mv derived_gpt gpt3_5/result
-# mv macro_func_gpt_success gpt3_5/success
-# mv macro_func_gpt gpt3_5/result
-# mv var_func_gpt_success gpt3_5/success
-# mv var_func_gpt gpt3_5/result
-# mv multi_thread_basic_cpp_gpt_success gpt3_5/success
-# mv multi_thread_basic_cpp_gpt gpt3_5/result
-# mv 1968A_gpt_success gpt3_5/success
-# mv 1968A_gpt gpt3_5/result
-# mv 1968B_gpt_success gpt3_5/success
-# mv 1968B_gpt gpt3_5/result
-# mv 1968C_gpt_success gpt3_5/success
-# mv 1968C_gpt gpt3_5/result
-# mv 1968D_gpt_success gpt3_5/success
-# mv 1968D_gpt gpt3_5/result
-# mv 1968E_gpt_success gpt3_5/success
-# mv 1968E_gpt gpt3_5/result
-# mv 1968F_gpt_success gpt3_5/success
-# mv 1968F_gpt gpt3_5/result
-# mv 1968G1_gpt_success gpt3_5/success
-# mv 1968G1_gpt gpt3_5/result
-# mv 1968G2_gpt_success gpt3_5/success
-# mv 1968G2_gpt gpt3_5/result
-# mv 1968A_cpp_gpt_success gpt3_5/success
-# mv 1968A_cpp_gpt gpt3_5/result
-# mv 1968B_cpp_gpt_success gpt3_5/success
-# mv 1968B_cpp_gpt gpt3_5/result
-# mv 1968C_cpp_gpt_success gpt3_5/success
-# mv 1968C_cpp_gpt gpt3_5/result
-# mv 1968D_cpp_gpt_success gpt3_5/success
-# mv 1968D_cpp_gpt gpt3_5/result
-# mv 1968E_cpp_gpt_success gpt3_5/success
-# mv 1968E_cpp_gpt gpt3_5/result
-# mv 1968F_cpp_gpt_success gpt3_5/success
-# mv 1968F_cpp_gpt gpt3_5/result
-# mv 1968G1_cpp_gpt_success gpt3_5/success
-# mv 1968G1_cpp_gpt gpt3_5/result
-# mv 1968G2_cpp_gpt_success gpt3_5/success
-# mv 1968G2_cpp_gpt gpt3_5/result
+mv double_free_gpt_success gpt3_5/success
+mv double_free_gpt gpt3_5/result
+mv message_queue_gpt_success gpt3_5/success
+mv message_queue_gpt gpt3_5/result
+mv multi_thread_basic_gpt_success gpt3_5/success
+mv multi_thread_basic_gpt gpt3_5/result
+mv mutex_gpt_success gpt3_5/success
+mv mutex_gpt gpt3_5/result
+mv queue_gpt_success gpt3_5/success
+mv queue_gpt gpt3_5/result
+mv queue_l_gpt_success gpt3_5/success
+mv queue_l_gpt gpt3_5/result
+mv server_clients_gpt_success gpt3_5/success
+mv server_clients_gpt gpt3_5/result
+mv tree_gpt_success gpt3_5/success
+mv tree_gpt gpt3_5/result
+mv tree_l_gpt_success gpt3_5/success
+mv tree_l_gpt gpt3_5/result
+mv weakptr_gpt_success gpt3_5/success
+mv weakptr_gpt gpt3_5/result
+mv weakptr_l_gpt_success gpt3_5/success
+mv weakptr_l_gpt gpt3_5/result
+mv derived_gpt_success gpt3_5/success
+mv derived_gpt gpt3_5/result
+mv macro_func_gpt_success gpt3_5/success
+mv macro_func_gpt gpt3_5/result
+mv var_func_gpt_success gpt3_5/success
+mv var_func_gpt gpt3_5/result
+mv multi_thread_basic_cpp_gpt_success gpt3_5/success
+mv multi_thread_basic_cpp_gpt gpt3_5/result
+mv 1968A_gpt_success gpt3_5/success
+mv 1968A_gpt gpt3_5/result
+mv 1968B_gpt_success gpt3_5/success
+mv 1968B_gpt gpt3_5/result
+mv 1968C_gpt_success gpt3_5/success
+mv 1968C_gpt gpt3_5/result
+mv 1968D_gpt_success gpt3_5/success
+mv 1968D_gpt gpt3_5/result
+mv 1968E_gpt_success gpt3_5/success
+mv 1968E_gpt gpt3_5/result
+mv 1968F_gpt_success gpt3_5/success
+mv 1968F_gpt gpt3_5/result
+mv 1968G1_gpt_success gpt3_5/success
+mv 1968G1_gpt gpt3_5/result
+mv 1968G2_gpt_success gpt3_5/success
+mv 1968G2_gpt gpt3_5/result
+mv 1968A_cpp_gpt_success gpt3_5/success
+mv 1968A_cpp_gpt gpt3_5/result
+mv 1968B_cpp_gpt_success gpt3_5/success
+mv 1968B_cpp_gpt gpt3_5/result
+mv 1968C_cpp_gpt_success gpt3_5/success
+mv 1968C_cpp_gpt gpt3_5/result
+mv 1968D_cpp_gpt_success gpt3_5/success
+mv 1968D_cpp_gpt gpt3_5/result
+mv 1968E_cpp_gpt_success gpt3_5/success
+mv 1968E_cpp_gpt gpt3_5/result
+mv 1968F_cpp_gpt_success gpt3_5/success
+mv 1968F_cpp_gpt gpt3_5/result
+mv 1968G1_cpp_gpt_success gpt3_5/success
+mv 1968G1_cpp_gpt gpt3_5/result
+mv 1968G2_cpp_gpt_success gpt3_5/success
+mv 1968G2_cpp_gpt gpt3_5/result
 echo "Done"
+
+echo "rename"
+python rename.py gpt3_5
+echo "Done"
+
